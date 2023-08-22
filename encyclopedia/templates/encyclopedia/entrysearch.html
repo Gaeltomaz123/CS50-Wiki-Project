@@ -1,0 +1,15 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    {{ entryname }}
+{% endblock %}
+
+{% block body %}
+    <h1>You searched for "{{ get }}"</h1>
+    <h3 style="font-weight: 400;">I found {{ results }} result(s)</h3>
+    <ul>
+        {% for suggestion in suggestions %}
+            <a href="wiki/{{ suggestion }}"><li>{{ suggestion }}</li></a>
+        {% endfor %}
+    </ul>
+{% endblock %}

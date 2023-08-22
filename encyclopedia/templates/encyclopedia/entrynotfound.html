@@ -1,0 +1,13 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    {{ entryname }}
+{% endblock %}
+
+{% block body %}
+    <h1>"{{ entryname }}"</h1>
+    <br>
+    <h3 style="font-weight: 400;">Not found ಠ_ಠ</h3>
+    <p>Seems that i couldn't found it!</p>
+    <p>You can create your own entry <a href="{% url 'entrynew' %}">here</a>.</p>
+{% endblock %}
